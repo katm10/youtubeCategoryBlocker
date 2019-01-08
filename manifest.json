@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "Youtube Category Blocker",
+	"version": "1.0",
+	"description": "Control your Youtube habits.",
+	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"options_page": "options.html",
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"128": "images/ycb128.png"
+		}
+	},
+	"icons": {
+		"128": "images/ycb128.png"
+	},
+	"content_scripts": [{
+		"matches": ["*://*.youtube.com/*"],
+		"js": ["background.js"],
+		"run_at": "document_end"
+	}],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	}
+}
