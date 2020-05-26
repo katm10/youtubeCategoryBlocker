@@ -39,7 +39,7 @@ function getCategories() {
     const parameters = {
       part: "snippet",
       regionCode: "US",
-      key: "AIzaSyCVY2qLQSlhuWdEdrxG3YCECIg0OUQj2z8"
+      key: "nope"
     };
 
     const url = "https://www.googleapis.com/youtube/v3/videoCategories";
