@@ -3,7 +3,7 @@
 	"name": "Youtube Category Blocker",
 	"version": "1.0",
 	"description": "Control your Youtube habits.",
-	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"permissions": ["activeTab", "declarativeContent", "storage", "*://*/*", "tabs"],
 	"options_page": "options.html",
 	"page_action": {
 		"default_popup": "popup.html",
@@ -16,7 +16,7 @@
 	},
 	"content_scripts": [{
 		"matches": ["*://*.youtube.com/*"],
-		"js": ["background.js"],
+		"js": ["content.js"],
 		"run_at": "document_end"
 	}],
 	"background": {
